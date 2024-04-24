@@ -1,1 +1,2 @@
-1 - Nome do produto: leite | Quantidade do produto [UN]: 4 | Tipo do Produto: Perecivel
+1 - Nome do produto: Leite  de papoula | Quantidade do produto [UN]: 4 | Tipo do Produto: Nao perecivel
+2 - Nome do produto: Carlos | Quantidade do produto [UN]: 5 | Tipo do Produto: Nao perecivel

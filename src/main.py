@@ -7,22 +7,15 @@ sem atulização de banco de dados (Praticar um CRUD)"""
 # Programa Principal
 from funcionalidade import funcao
 
+
 while True:
     
     # Menu de Exibição 
-    funcao.menuPricipal()
+    funcao.exibirInformacaoMenuPricipal()
     # Variavel para escolha das opções de menu
-    entrada = int(input("Escolha uma das opções acima: "))
-    print("==" * 20)
-    if entrada == 1:
-        
-        funcao.cadastrarProduto()
-        
-    if entrada == 2: 
-        funcao.consultarProduto()
-    if entrada == 3:
-        funcao.atualizarProduto()
-    if entrada == 4:
-        funcao.deletarProduto()
-    elif entrada >= 5:
+    entradaUsuario = int(input("Escolha uma das opções acima: "))
+    
+    if entradaUsuario <= 4:
+        funcao.menuPricipal(entrada=entradaUsuario)
+    else:
         break

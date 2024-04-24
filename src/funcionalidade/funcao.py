@@ -1,5 +1,6 @@
-# Funcionalidade de Menu de Exibição
-def menuPricipal():
+def exibirInformacaoMenuPricipal():
+    # Funcionalidade de Menu de Exibição
+
     print("=" * 8, "Sistema de Gerencimento de Produtos", "=" * 8)    
     print("1 - Cadastrar Produto")
     print("2 - Consultar Produto")
@@ -8,7 +9,8 @@ def menuPricipal():
     print("5 - SAIR")
     print("==" * 25)
 
-def menuTipoProduto():
+
+def exibirInformacaoMenuTipoProduto():
     # Menu para exibir os tipos de classificação de produtos
     print("==" * 8,"Tipo do produto", "==" * 8)
     print("1 - Perecivel")
@@ -17,15 +19,49 @@ def menuTipoProduto():
     print("4 - Produto de limpeza")
     print("==" * 25)
 
+def menuPricipal(entrada):
+     
+    print("==" * 20)
+
+    if entrada == 1:
+        cadastrarProduto()
+    elif entrada == 2: 
+        consultarProduto()
+    elif entrada == 3:
+        atualizarProduto()
+    elif entrada == 4:
+        deletarProduto()
+
+def menuTipoProduto(tipoProduto):
+    if tipoProduto == '1':
+        classificacao = "Perecivel"
+    elif tipoProduto ==  '2':
+        classificacao = "Nao perecivel"
+    elif tipoProduto == '3':
+        classificacao = "Higiene Pessoal"
+    elif tipoProduto == '4':
+        classificacao = "Produto de Limpeza"
+    else:
+        classificacao = "Indeterminado"
+    return classificacao
+
 def contadorLinhas():
     # retorna valor total do número de linhas existentes no arquivo .txt
     # Contagem de Linhas para determinar a ultima posição das linhas enumerada
-    with open("src\historico\estoque.txt", "r") as file:
+    with open(r"src\historico\estoque.txt", "r") as file:
         numeroLinha = file.readlines()
         ultimaLinha = len(numeroLinha)
         ultimaLinha += 1
         return ultimaLinha
-    
+
+# Função que salva as informações fornecidas do produto no estoque
+def salvarEstoque(posicaoProduto, nomeProduto, quantidadeProduto, tipoProduto):
+
+ # Salvo/Adiciono as informações fornecidas pelo usuario em um arquivo .txt 
+    with open(r"src\historico\estoque.txt", "a") as file:
+        file.write(f"{posicaoProduto} - Nome do produto: {nomeProduto} | Quantidade do produto [UN]: {quantidadeProduto} | Tipo do Produto: {tipoProduto}\n")
+
+
 # Funcionalidade Cadastrar Produtos 
 def cadastrarProduto():
 
@@ -33,30 +69,19 @@ def cadastrarProduto():
     quantidade  = int(input("Quantidade do produto [UN]: "))
     posicao = contadorLinhas()
     
-    menuTipoProduto()
+    exibirInformacaoMenuTipoProduto()
     
     # NOTA: adicionar um Try para n querbrar o codigo
-    escolhaTipoProduto = str(input("Tipo do produto: ")) 
-    # Seleção para escolher a classificação do produto
-    if escolhaTipoProduto == '1':
-        tipoProduto = "Perecivel"
-    elif escolhaTipoProduto ==  '2':
-        tipoProduto = "Nao perecivel"
-    elif escolhaTipoProduto == '3':
-        tipoProduto = "Higiene Pessoal"
-    elif escolhaTipoProduto == '4':
-        tipoProduto = "Produto de Limpeza"
-    else:
-        tipoProduto = "Indeterminado"
-    
+    escolhaUsuarioTipoProduto = str(input("Tipo do produto: ")) 
+    # Função que escolher a classificação do produto
+    # Variavel para armazenar o valor obitido de menuTipoProduto
+    informacaoTipoProduto = menuTipoProduto(escolhaUsuarioTipoProduto)
     # Salvo/Adiciono as informações fornecidas pelo usuario em um arquivo .txt 
-    with open("src\historico\estoque.txt", "a") as file:
-        file.write(f"{posicao} - Nome do produto: {nomeProduto} | Quantidade do produto [UN]: {quantidade} | Tipo do Produto: {tipoProduto}\n")
- 
+    salvarEstoque(posicao, nomeProduto, quantidade, informacaoTipoProduto)
  
 # Função consultarProduto, Exibe no Terminal um print do arquivo .txt a qual é armazenado as informações dos produtos       
 def consultarProduto():
-    with open("src\historico\estoque.txt", "rt") as file:
+    with open(r"src\historico\estoque.txt", "rt") as file:
         leituraEstoque = file.read()
         print(leituraEstoque)
 
@@ -67,19 +92,20 @@ def atualizarProduto():
     consultarProduto()
      # Conta o número total de linhas no arquivo
     numeroTotalLinhas = contadorLinhas()
-    novaLinhaAtualizada = int(input("Digite o número da linha para alterar: "))
-    
-    if novaLinhaAtualizada <= numeroTotalLinhas:
-        with open("src\historico\estoque.txt", "r") as file:
-            linhas = file.readlines()
 
+    escolheLinhaAtualizar = int(input("Digite o número da linha para alterar: "))
+    
+    if escolheLinhaAtualizar <= numeroTotalLinhas:
+
+        linhas = contadorLinhas()
+        print(linhas)
         # Verifica se a linha desejada existe
-        if novaLinhaAtualizada <= len(linhas):
+        if escolheLinhaAtualizar <= linhas:
             # Altera a linha desejada
-            linhas[novaLinhaAtualizada - 1] = cadastrarProduto()
+            linhas[escolheLinhaAtualizar - 1] = cadastrarProduto()
             
             # Escreve as alterações de volta no arquivo
-            with open("src\historico\estoque.txt", "w") as file:
+            with open(r"src\historico\estoque.txt", "w") as file:
                 file.writelines(linhas)
         else:
             print("Erro: Linha não encontrada.")
@@ -87,4 +113,5 @@ def atualizarProduto():
         print("Erro: Número da linha inválido.")
     
         
-    
+def deletarProduto():
+    pass
