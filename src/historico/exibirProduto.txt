@@ -1,0 +1,3 @@
+Nome do produto: Coca-Cola Zero | Quantidade do produto [UN]: 23 | Tipo do Produto: Perecivel
+Nome do produto: Peito de Frango | Quantidade do produto [UN]: 123 | Tipo do Produto: Perecivel
+Nome do produto: Pasta de dente  | Quantidade do produto [UN]: 23 | Tipo do Produto: Produto de Limpeza

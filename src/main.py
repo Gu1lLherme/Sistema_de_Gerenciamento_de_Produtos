@@ -5,13 +5,13 @@ de uma mercearia, contendo as funcionalidades de Cadastrar, Consultar, Atualizar
 sem atulização de banco de dados (Praticar um CRUD)"""
 
 # Programa Principal
-from funcionalidade import funcao
+from funcionalidade import funcao, menu
 
 
 while True:
     
-    # Menu de Exibição 
-    funcao.exibirInformacaoMenuPricipal()
+# Menu de Exibição          
+    menu.exibirInformacaoMenuPricipal()
     # Variavel para escolha das opções de menu
     entradaUsuario = int(input("Escolha uma das opções acima: "))
     

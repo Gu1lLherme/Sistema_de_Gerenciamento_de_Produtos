@@ -1,6 +1,3 @@
-1 - Nome do produto: Carlos Eduardo Bolsonaro | Quantidade do produto [UN]: 34 | Tipo do Produto: Higiene Pessoal
-2 - Nome do produto: leiiete | Quantidade do produto [UN]: 34 | Tipo do Produto: Higiene Pessoal
-3 - Nome do produto: kipnoini | Quantidade do produto [UN]: 7 | Tipo do Produto: Higiene Pessoal
-4 - Nome do produto: Chocolate | Quantidade do produto [UN]: 8 | Tipo do Produto: Perecivel
-5 - Nome do produto: LUIZAÇAO | Quantidade do produto [UN]: 3 | Tipo do Produto: Produto de Limpeza
-6 - Nome do produto: Guilherme | Quantidade do produto [UN]: 8 | Tipo do Produto: Produto de Limpeza
+1 - Nome do produto: Coca-Cola Zero | Quantidade do produto [UN]: 23 | Tipo do ProduPerecivel
+2 - Nome do produto: Carne Bovina | Quantidade do produto [UN]: 245| Tipo do Produto: Perecivel
+3 - Nome do produto: Pasta de dente  | Quantidade do produto [UN]: 23 | Tipo do ProduProduto de Limpeza
