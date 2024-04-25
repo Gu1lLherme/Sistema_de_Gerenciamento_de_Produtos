@@ -1,2 +1,6 @@
-1 - Nome do produto: Leite  de papoula | Quantidade do produto [UN]: 4 | Tipo do Produto: Nao perecivel
-2 - Nome do produto: Carlos | Quantidade do produto [UN]: 5 | Tipo do Produto: Nao perecivel
+1 - Nome do produto: Carlos Eduardo Bolsonaro | Quantidade do produto [UN]: 34 | Tipo do Produto: Higiene Pessoal
+2 - Nome do produto: leiiete | Quantidade do produto [UN]: 34 | Tipo do Produto: Higiene Pessoal
+3 - Nome do produto: kipnoini | Quantidade do produto [UN]: 7 | Tipo do Produto: Higiene Pessoal
+4 - Nome do produto: Chocolate | Quantidade do produto [UN]: 8 | Tipo do Produto: Perecivel
+5 - Nome do produto: LUIZAÇAO | Quantidade do produto [UN]: 3 | Tipo do Produto: Produto de Limpeza
+6 - Nome do produto: Guilherme | Quantidade do produto [UN]: 8 | Tipo do Produto: Produto de Limpeza
