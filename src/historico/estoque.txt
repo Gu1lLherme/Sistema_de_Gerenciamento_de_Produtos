@@ -1,3 +1,4 @@
 1 - Nome do produto: Coca-Cola Zero | Quantidade do produto [UN]: 23 | Tipo do ProduPerecivel
 2 - Nome do produto: Carne Bovina | Quantidade do produto [UN]: 245| Tipo do Produto: Perecivel
 3 - Nome do produto: Pasta de dente  | Quantidade do produto [UN]: 23 | Tipo do ProduProduto de Limpeza
+4 - Nome do produto: chocolate  | Quantidade do produto [UN]: 2| Tipo do Produto: Perecivel

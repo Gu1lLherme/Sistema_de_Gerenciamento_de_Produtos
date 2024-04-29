@@ -100,7 +100,7 @@ def consultarEstoqueProduto():
             print(leituraEstoque)
 
 def atualizarProdutoEstoque():
-    # Exibe o estoque na tela (você pode implementar a função consultarProduto() aqui)
+    # Exibe o estoque na tela 
     consultarEstoqueProduto()
     # Conta o número total de linhas no arquivo
     numeroTotalLinhas = contadorLinhas()
